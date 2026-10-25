@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" width="1200" height="1200">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe39a"/>
+      <stop offset="0.55" stop-color="#e9b73c"/>
+      <stop offset="1" stop-color="#b8860b"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a6be0"/><stop offset="1" stop-color="#174bb0"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#de4646"/><stop offset="1" stop-color="#b02c2c"/>
+    </linearGradient>
+    <!-- heraldic "heater" shield -->
+    <path id="shield" d="M 340 240 Q 470 214 600 196 Q 730 214 860 240 L 860 610 C 860 820 760 920 600 1000 C 440 920 340 820 340 610 Z"/>
+    <clipPath id="inShield"><use href="#shield"/></clipPath>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <symbol id="star" viewBox="-1 -1 2 2">
+      <polygon points="0,-1 0.235,-0.324 0.951,-0.309 0.38,0.124 0.588,0.809 0,0.4 -0.588,0.809 -0.38,0.124 -0.951,-0.309 -0.235,-0.324"/>
+    </symbol>
+  </defs>
+
+  
+
+  <!-- laurel wreath -->
+  <path d="M 402.9 925.5 A 372 372 0 0 1 425.4 281.5" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/><path d="M 797.1 925.5 A 372 372 0 0 0 774.6 281.5" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/><g fill="url(#gold)"><ellipse cx="345" cy="903.1" rx="13" ry="32" transform="rotate(270 345 903.1)"/><ellipse cx="364.7" cy="877.9" rx="13" ry="32" transform="rotate(346 364.7 877.9)"/><ellipse cx="289.6" cy="843.7" rx="13" ry="32" transform="rotate(282 289.6 843.7)"/><ellipse cx="314.1" cy="823.1" rx="13" ry="32" transform="rotate(358 314.1 823.1)"/><ellipse cx="247.8" cy="774.1" rx="13" ry="32" transform="rotate(294 247.8 774.1)"/><ellipse cx="276.1" cy="759" rx="13" ry="32" transform="rotate(370 276.1 759)"/><ellipse cx="221.4" cy="697.3" rx="13" ry="32" transform="rotate(306 221.4 697.3)"/><ellipse cx="252.2" cy="688.4" rx="13" ry="32" transform="rotate(382 252.2 688.4)"/><ellipse cx="211.5" cy="616.6" rx="13" ry="32" transform="rotate(318 211.5 616.6)"/><ellipse cx="243.4" cy="614.4" rx="13" ry="32" transform="rotate(394 243.4 614.4)"/><ellipse cx="218.6" cy="535.7" rx="13" ry="32" transform="rotate(330 218.6 535.7)"/><ellipse cx="250.3" cy="540.2" rx="13" ry="32" transform="rotate(406 250.3 540.2)"/><ellipse cx="242.4" cy="458" rx="13" ry="32" transform="rotate(342 242.4 458)"/><ellipse cx="272.5" cy="469" rx="13" ry="32" transform="rotate(418 272.5 469)"/><ellipse cx="281.8" cy="387" rx="13" ry="32" transform="rotate(354 281.8 387)"/><ellipse cx="309" cy="404" rx="13" ry="32" transform="rotate(430 309 404)"/><ellipse cx="335.1" cy="325.7" rx="13" ry="32" transform="rotate(366 335.1 325.7)"/><ellipse cx="358.2" cy="348" rx="13" ry="32" transform="rotate(442 358.2 348)"/><ellipse cx="400" cy="276.9" rx="13" ry="32" transform="rotate(378 400 276.9)"/><ellipse cx="417.9" cy="303.4" rx="13" ry="32" transform="rotate(454 417.9 303.4)"/><ellipse cx="835.3" cy="877.9" rx="13" ry="32" transform="rotate(14 835.3 877.9)"/><ellipse cx="855" cy="903.1" rx="13" ry="32" transform="rotate(90 855 903.1)"/><ellipse cx="885.9" cy="823.1" rx="13" ry="32" transform="rotate(2 885.9 823.1)"/><ellipse cx="910.4" cy="843.7" rx="13" ry="32" transform="rotate(78 910.4 843.7)"/><ellipse cx="923.9" cy="759" rx="13" ry="32" transform="rotate(-10 923.9 759)"/><ellipse cx="952.2" cy="774.1" rx="13" ry="32" transform="rotate(66 952.2 774.1)"/><ellipse cx="947.8" cy="688.4" rx="13" ry="32" transform="rotate(-22 947.8 688.4)"/><ellipse cx="978.6" cy="697.3" rx="13" ry="32" transform="rotate(54 978.6 697.3)"/><ellipse cx="956.6" cy="614.4" rx="13" ry="32" transform="rotate(-34 956.6 614.4)"/><ellipse cx="988.5" cy="616.6" rx="13" ry="32" transform="rotate(42 988.5 616.6)"/><ellipse cx="949.7" cy="540.2" rx="13" ry="32" transform="rotate(-46 949.7 540.2)"/><ellipse cx="981.4" cy="535.7" rx="13" ry="32" transform="rotate(30 981.4 535.7)"/><ellipse cx="927.5" cy="469" rx="13" ry="32" transform="rotate(-58 927.5 469)"/><ellipse cx="957.6" cy="458" rx="13" ry="32" transform="rotate(18 957.6 458)"/><ellipse cx="891" cy="404" rx="13" ry="32" transform="rotate(-70 891 404)"/><ellipse cx="918.2" cy="387" rx="13" ry="32" transform="rotate(6 918.2 387)"/><ellipse cx="841.8" cy="348" rx="13" ry="32" transform="rotate(-82 841.8 348)"/><ellipse cx="864.9" cy="325.7" rx="13" ry="32" transform="rotate(-6 864.9 325.7)"/><ellipse cx="782.1" cy="303.4" rx="13" ry="32" transform="rotate(-94 782.1 303.4)"/><ellipse cx="800" cy="276.9" rx="13" ry="32" transform="rotate(-18 800 276.9)"/></g>
+
+  <!-- crowning star -->
+  <use href="#star" x="545" y="76" width="110" height="110" fill="url(#gold)" filter="url(#shadow)"/>
+
+  <!-- shield -->
+  <g filter="url(#shadow)">
+    <use href="#shield" fill="#13255a"/>
+    <g clip-path="url(#inShield)">
+      <!-- field: party per pale, blue and red -->
+      <rect x="330" y="400" width="270" height="620" fill="url(#blue)"/>
+      <rect x="600" y="400" width="270" height="620" fill="url(#red)"/>
+      <!-- chief (top band) -->
+      <rect x="330" y="180" width="540" height="220" fill="#13255a"/>
+      <rect x="330" y="394" width="540" height="12" fill="url(#gold)"/>
+      <!-- 270-to-win line down the middle -->
+      <rect x="595" y="406" width="10" height="620" fill="#ffffff" opacity="0.9"/>
+    </g>
+    <use href="#shield" fill="none" stroke="url(#gold)" stroke-width="20"/>
+    <use href="#shield" fill="none" stroke="#ffffff" stroke-width="4" transform="translate(600 600) scale(0.955) translate(-600 -600)" opacity="0.6"/>
+  </g>
+
+  <!-- chief: league initials between stars -->
+  <g fill="#ffffff">
+    <use href="#star" x="392" y="318" width="38" height="38"/>
+    <use href="#star" x="770" y="318" width="38" height="38"/>
+  </g>
+  <text x="600" y="374" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', Impact, sans-serif"
+        font-size="112" font-weight="900" fill="#ffffff" letter-spacing="10">RPL</text>
+  <text x="600" y="258" text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', Impact, sans-serif"
+        font-size="24" font-weight="900" fill="#f0c348" letter-spacing="8">EST. 2026</text>
+
+  <!-- 270 -->
+  <text x="600" y="705" text-anchor="middle" filter="url(#shadow)"
+        font-family="'Arial Black', 'Segoe UI Black', Impact, sans-serif" font-size="236" font-weight="900"
+        fill="#ffffff" stroke="#0c1633" stroke-width="10" paint-order="stroke" letter-spacing="-6">270</text>
+
+  <!-- ribbon scroll -->
+  <g filter="url(#shadow)">
+    <path d="M 170 905 L 270 905 L 270 1000 L 170 1000 L 210 952 Z" fill="#a8790a"/>
+    <path d="M 1030 905 L 930 905 L 930 1000 L 1030 1000 L 990 952 Z" fill="#a8790a"/>
+    <path d="M 250 885 L 270 905 L 270 1000 L 250 980 Z" fill="#7a5806"/>
+    <path d="M 950 885 L 930 905 L 930 1000 L 950 980 Z" fill="#7a5806"/>
+    <path d="M 250 885 Q 600 850 950 885 L 950 980 Q 600 945 250 980 Z" fill="url(#gold)"/>
+  </g>
+  <text text-anchor="middle" font-family="'Arial Black', 'Segoe UI Black', Impact, sans-serif"
+        font-size="37" font-weight="900" fill="#13255a" letter-spacing="2">
+    <textPath href="#ribbonText" startOffset="50%">RANKED PLAYERS LEAGUE</textPath>
+  </text>
+  <path id="ribbonText" d="M 270 948 Q 600 912 930 948" fill="none"/>
+</svg>

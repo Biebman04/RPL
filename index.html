@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>270 RPL</title>
+<!-- Private league: keep out of search results. -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="description" content="270 Ranked Players League">
+<meta property="og:title" content="270 Ranked Players League">
+<meta property="og:description" content="Brackets, rankings and sign-ups for the 270 RPL.">
+<link rel="icon" href="crest.svg" type="image/svg+xml">
+<style>
+  :root { --bg: #0c1633; --card: #13255a; --text: #ffffff; --muted: #c9d4ef; --gold: #f0c348; --blue: #1f5fd6; --red: #d23c3c; }
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: radial-gradient(circle at 50% 20%, #18306e, var(--bg) 70%); color: var(--text);
+         font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; display: flex; justify-content: center; }
+  main { width: 100%; max-width: 440px; padding: 28px 16px 40px; text-align: center; }
+  .crest { width: 190px; height: 190px; display: block; margin: 0 auto 6px; }
+  h1 { margin: 4px 0 2px; font: 900 26px/1.15 'Arial Black', 'Segoe UI Black', Impact, sans-serif; letter-spacing: .5px; }
+  .sub { color: var(--gold); font-weight: 700; letter-spacing: 2px; font-size: 13px; }
+  .card { margin-top: 22px; padding: 18px 16px; border-radius: 16px; background: rgba(19, 37, 90, .9);
+          border: 1px solid rgba(240, 195, 72, .35); text-align: left; }
+  .card h2 { margin: 0 0 6px; font-size: 19px; }
+  .muted { color: var(--muted); font-size: 14px; }
+  .btn { display: block; width: 100%; margin-top: 14px; padding: 15px 16px; border: 0; border-radius: 12px; text-align: center;
+         font: 800 17px/1.2 -apple-system, "Segoe UI", sans-serif; text-decoration: none; cursor: pointer; }
+  .btn.gold { background: linear-gradient(180deg, #ffe39a, #e9b73c 55%, #c99418); color: #13255a; }
+  .btn.ghost { background: transparent; color: var(--text); border: 2px solid rgba(255,255,255,.35); }
+  ol { margin: 10px 0 0; padding-left: 22px; }
+  ol li { margin: 6px 0; }
+  .dots { display: inline-block; padding: 0 7px; border-radius: 6px; background: rgba(255,255,255,.15); font-weight: 800; }
+  .linkbox { margin-top: 10px; width: 100%; padding: 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,.25);
+             background: rgba(0,0,0,.25); color: var(--text); font-size: 13px; }
+  .stripe { height: 6px; border-radius: 3px; margin: 14px auto 0; width: 120px; background: linear-gradient(90deg, var(--blue) 50%, var(--red) 50%); }
+  .hidden { display: none; }
+  .ok { color: #7be0a4; font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <img class="crest" src="crest.svg" alt="270 RPL crest">
+  <h1>270 RANKED<br>PLAYERS LEAGUE</h1>
+  <div class="sub">THE INAUGURAL TOUR</div>
+  <div class="stripe"></div>
+
+  <!-- Normal browsers: we jump straight to the app. -->
+  <div id="going" class="card">
+    <h2>Opening the league…</h2>
+    <div class="muted">If nothing happens, tap below.</div>
+    <a class="btn gold" id="goBtn" href="#">Open the 270 RPL</a>
+  </div>
+
+  <!-- Facebook / Messenger / Instagram built-in browser -->
+  <div id="inapp" class="card hidden">
+    <h2>Open in your browser</h2>
+    <div class="muted">The league app doesn't work inside Facebook's built-in browser. It takes one tap to open it in
+      <span id="browserName">Safari</span>:</div>
+    <a class="btn gold" id="openOut" href="#">Open in <span id="browserName2">Safari</span></a>
+    <div id="manual">
+      <div class="muted" style="margin-top:16px">Button didn't work? Do this instead:</div>
+      <ol class="muted">
+        <li>Tap <span class="dots">⋯</span> at the top right (or bottom right) of this screen.</li>
+        <li>Choose <b id="menuChoice">Open in external browser</b>.</li>
+      </ol>
+      <div class="muted" style="margin-top:12px">Or copy the link and paste it into Safari or Chrome:</div>
+      <input class="linkbox" id="linkBox" readonly>
+      <button class="btn ghost" id="copyBtn" type="button">Copy link</button>
+      <div id="copied" class="ok hidden" style="margin-top:8px">Copied! Now paste it into Safari or Chrome.</div>
+    </div>
+    <div class="muted" style="margin-top:14px">Tip: once it's open, bookmark it or add it to your home screen.</div>
+  </div>
+
+  <noscript><div class="card"><a class="btn gold" href="https://script.google.com/macros/s/AKfycbxhL6gtgRvlwETxPJ-gKxgUcR0mGAOBC9P2-AmnSPHVO7vHrVELKRjSTzXJBli6eQ0_/exec">Open the 270 RPL</a></div></noscript>
+</main>
+
+<script>
+// The league app (Google Apps Script). The landing link passes its ?page=... along,
+// e.g. https://YOURNAME.github.io/?page=join opens the Join tab.
+var APP = 'https://script.google.com/macros/s/AKfycbxhL6gtgRvlwETxPJ-gKxgUcR0mGAOBC9P2-AmnSPHVO7vHrVELKRjSTzXJBli6eQ0_/exec';
+
+var params = new URLSearchParams(location.search);
+var pass = new URLSearchParams();
+['page', 'm'].forEach(function (k) { if (params.get(k)) pass.set(k, params.get(k)); });
+var target = APP + (pass.toString() ? '?' + pass.toString() : '');
+
+// ?test=fbios | fbandroid | normal lets us check each case from a computer; ?stay=1 skips the redirect.
+var ua = navigator.userAgent || '';
+var test = params.get('test');
+var inApp = test ? test !== 'normal' : /FBAN|FBAV|FB_IAB|FBIOS|FB4A|Messenger|Instagram|Threads/i.test(ua);
+var isIOS = test ? test === 'fbios' : /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && 'ontouchend' in document);
+var isAndroid = test ? test === 'fbandroid' : /Android/i.test(ua);
+
+function $(id) { return document.getElementById(id); }
+$('goBtn').href = target;
+$('linkBox').value = target;
+
+if (!inApp) {
+  if (!params.get('stay')) location.replace(target);
+} else {
+  $('going').classList.add('hidden');
+  $('inapp').classList.remove('hidden');
+  if (isIOS) {
+    // iOS 17+ opens Safari for x-safari-https:// links; older iPhones use the ⋯ steps.
+    $('openOut').href = 'x-safari-' + target;
+    $('menuChoice').textContent = 'Open in External Browser (or "Open in Safari")';
+  } else if (isAndroid) {
+    // Android: hand the link to Chrome (falls back to the default browser).
+    var noScheme = target.replace(/^https:\/\//, '');
+    $('openOut').href = 'intent://' + noScheme + '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' +
+      encodeURIComponent(target) + ';end';
+    $('browserName').textContent = $('browserName2').textContent = 'Chrome';
+    $('menuChoice').textContent = 'Open in Chrome (or "Open in browser")';
+    if (!params.get('stay')) setTimeout(function () { location.href = $('openOut').href; }, 400);
+  } else {
+    $('openOut').href = target;
+    $('browserName').textContent = $('browserName2').textContent = 'your browser';
+  }
+}
+
+$('copyBtn').onclick = function () {
+  function done() { $('copied').classList.remove('hidden'); }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(target).then(done, fallback);
+  } else {
+    fallback();
+  }
+  function fallback() {
+    var box = $('linkBox');
+    box.focus();
+    box.select();
+    box.setSelectionRange(0, 99999);
+    try { if (document.execCommand('copy')) done(); } catch (e) {}
+  }
+};
+</script>
+</body>
+</html>
